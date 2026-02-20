@@ -5,11 +5,17 @@ btn.addEventListener('click', e => {
 
     e.preventDefault();
 
-    const inputNumber = document.getElementById('inputNumber');
-    const number = inputNumber.value
+    // const inputNumber = document.getElementById('inputNumber');
+    // const number = inputNumber.value
 
-    const inputPin = document.getElementById('inputPin');
-    const pin = inputPin.value;
+    const number = getValue('inputNumber')
+
+
+    // const inputPin = document.getElementById('inputPin');
+    // const pin = inputPin.value;
+
+    const pin = getValue('inputPin');
+
 
     if(number == '01712871720' && pin == '1234') {
 

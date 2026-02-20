@@ -31,10 +31,10 @@
 
 </head>
 
-<body class="min-h-screen max-w-md bg-base-200 mx-auto  ">
+<body class="min-h-screen max-w-md bg-base-200 mx-auto  py-8">
 
 
-    <header class="pt-10">
+    <header class="pb-8 sticky bg-base-200">
         <section class="w-11/12 mx-auto bg-base-200 flex justify-between items-center">
             <div class="nav-left flex gap-6 items-center">
 
@@ -46,7 +46,7 @@
 
 
                 <div class="w-full">
-                    <h3 class="font-bold">$45000</h3>
+                    <h3 class="font-bold">$ <span id="amount">45000</span></h3>
                     <p class="text-neutral-500">Available Balance</p>
                 </div>
 
@@ -54,16 +54,17 @@
 
             <div class="nav-right">
 
-                <button class="btn btn-soft">
+                <a href="./index.html" class="btn btn-soft">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     Log Out
-                </button>
+                </a>
             </div>
         </section>
     </header>
 
-    <main class="w-11/12 mx-auto mt-8">
+    <main class="w-11/12 mx-auto">
 
+        <!-- header content -->
         <section class="header-content space-y-4">
 
             <h2 class="font-bold text-2xl">Welcome to Payoo</h2>
@@ -105,6 +106,29 @@
 
         <!-- add money section  -->
         <section class="space-y-10">
+            <h3 class="font-semibold text-xl text-[rgba(8,8,8,0.9)]">Cash Out</h3>
+
+            <form class="bg-base-100 border-base-300 rounded-3xl  p-4 shadow ">
+
+                <label class="label font-bold mb-3">Agent Number</label>
+                <input id="cashout-number"  type="text" maxlength="11" minlength="11"
+                    class="input mb-4 bg-[#f4f5f7] rounded-4xl px-5 w-full py-4" placeholder="Enter 11 digit number" />
+
+                <label class="label font-bold mb-3">Amount</label>
+                <input id="cashout-amount"  type="number" maxlength="11" minlength="11"
+                    class="input mb-4 bg-[#f4f5f7] rounded-4xl px-5 w-full py-4" placeholder="Enter Amount to withdraw" />
+            
+                <label class="label font-bold mb-3">Pin Number</label>
+                <input id="cashout-pin" type="password" maxlength="4" minlength="4"
+                    class="input bg-[#f4f5f7] mb-4 rounded-4xl px-5 w-full py-4" placeholder="Enter 4 digit pin number" />
+            
+                <button id="cashout" class="btn btn-neutral mt-4 w-full bg-[#3b25c1] rounded-full">Withdrow Money</button>
+            </form>
+        </section>
+
+
+        <!-- add money section 
+        <section class="space-y-10">
             <h3 class="font-semibold text-xl text-[rgba(8,8,8,0.9)]">Add Money</h3>
 
             <form class="bg-base-100 border-base-300 rounded-3xl  p-4 shadow ">
@@ -131,13 +155,16 @@
             
                 <button id="btnId" class="btn btn-neutral mt-4 w-full bg-[#3b25c1] rounded-full">Add Money</button>
             </form>
-        </section>
+        </section> -->
 
 
     </main>
 
 
 
+    
+    <script src="./js/cashout.js"></script>
+    <script src="./js/machine.js"></script>
 </body>
 
 </html>
