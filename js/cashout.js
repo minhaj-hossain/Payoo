@@ -25,6 +25,11 @@ cashOut.addEventListener('click', e => {
     // using machine function 
 
     const number = getValue('cashout-number');
+
+    if(number.length != 11) {
+        alert('invalid number')
+        return;
+    }
     // console.log(number);
 
 
@@ -65,9 +70,10 @@ cashOut.addEventListener('click', e => {
         alert('successful');
         currentBalence.innerText = newBalance;
     } else {
-        alert('go back!')
+        alert('invalid pin')
         return;
     }
+
 
 
 

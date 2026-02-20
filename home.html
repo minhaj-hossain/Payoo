@@ -76,11 +76,11 @@
         <!-- card section  -->
         <section class="my-10">
             <div class="btns grid grid-cols-3 gap-6">
-                <button class="btn btn-primary btn-soft py-12 flex-col ">
+                <button id="add-money-btn" onclick="showOnly('add-money')" class="btn btn-primary btn-soft py-12 flex-col ">
                     <img src="./assets/opt-1.png" alt="opt one">
                     <h3 class="text-[rgba(8,8,8,0.7)]">Add Money</h3>
                 </button>
-                <button class="btn btn-primary btn-soft py-12 flex-col ">
+                <button onclick="showOnly('cashout')" class="btn btn-primary btn-soft py-12 flex-col ">
                     <img src="./assets/opt-2.png" alt="opt one">
                     <h3 class="text-[rgba(8,8,8,0.7)]">Cashout</h3>
                 </button>
@@ -104,8 +104,8 @@
         </section>
 
 
-        <!-- add money section  -->
-        <section class="space-y-10">
+        <!-- cashout section  -->
+        <section id="cashout" class="space-y-10 hidden">
             <h3 class="font-semibold text-xl text-[rgba(8,8,8,0.9)]">Cash Out</h3>
 
             <form class="bg-base-100 border-base-300 rounded-3xl  p-4 shadow ">
@@ -127,18 +127,18 @@
         </section>
 
 
-        <!-- add money section 
-        <section class="space-y-10">
+        <!-- add money section  -->
+        <section id="add-money" class="space-y-10 hidden">
             <h3 class="font-semibold text-xl text-[rgba(8,8,8,0.9)]">Add Money</h3>
 
             <form class="bg-base-100 border-base-300 rounded-3xl  p-4 shadow ">
 
                 <label class="label font-bold mb-3">Select A Bank</label>
-                <select class="select mb-4 bg-[#f4f5f7] rounded-4xl px-5 w-full py-1 text-[rgba(8,8,8,0.4)]">
+                <select id="select-bank" class="select mb-4 bg-[#f4f5f7] rounded-4xl px-5 w-full py-1 text-[rgba(8,8,8,0.4)]">
                     <option disabled selected>Select Bank</option>
-                    <option>BD Bank</option>
-                    <option>Bank Asia</option>
-                    <option>UCB</option>
+                    <option value="DBBL">DBBL</option>
+                    <option value="Bank Asia">Bank Asia</option>
+                    <option value="UCB">UCB</option>
                 </select>
 
                 <label class="label font-bold mb-3">Bank Account Number</label>
@@ -155,7 +155,7 @@
             
                 <button id="btnId" class="btn btn-neutral mt-4 w-full bg-[#3b25c1] rounded-full">Add Money</button>
             </form>
-        </section> -->
+        </section>
 
 
     </main>
@@ -163,8 +163,9 @@
 
 
     
-    <script src="./js/cashout.js"></script>
     <script src="./js/machine.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashout.js"></script>
 </body>
 
 </html>
